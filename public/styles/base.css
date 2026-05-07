@@ -1,0 +1,71 @@
+html {
+  min-height: 100%;
+  background: var(--color-soft-white);
+}
+
+body {
+  overflow-x: hidden;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  color: var(--color-deep-ink);
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255,179,204,0.34), transparent 32rem),
+    radial-gradient(circle at 90% 0%, rgba(95,255,212,0.14), transparent 26rem),
+    var(--color-soft-white);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  text-rendering: geometricPrecision;
+}
+
+body.ui-frozen #app-wrapper {
+  pointer-events: none;
+}
+
+button,
+a,
+[role="button"] {
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-electric-mint);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: var(--text-display);
+}
+
+h2 {
+  font-size: clamp(var(--text-xl), 6vw, 2.75rem);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}

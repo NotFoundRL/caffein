@@ -1,0 +1,92 @@
+#app-wrapper {
+  position: relative;
+  min-height: 100svh;
+  padding: calc(env(safe-area-inset-top) + var(--space-2)) var(--space-2) calc(env(safe-area-inset-bottom) + var(--space-3));
+  isolation: isolate;
+}
+
+.top-bar {
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + var(--space-2));
+  right: var(--space-2);
+  left: var(--space-2);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.top-bar > * {
+  pointer-events: auto;
+}
+
+.game-stage {
+  display: grid;
+  min-height: calc(100svh - var(--space-4));
+  place-items: center;
+  padding: 5.5rem 0 8rem;
+}
+
+.stage-card {
+  width: min(100%, 42rem);
+  padding: clamp(1.25rem, 5vw, 2.5rem);
+  border: 1px solid rgba(255,255,255,0.75);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.72)),
+    var(--color-ghost-white);
+  box-shadow: var(--shadow-card);
+}
+
+.stage-card.dark {
+  color: var(--color-soft-white);
+  border-color: rgba(255,107,157,0.34);
+  background: var(--gradient-chaos);
+}
+
+.stage-stack {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.stage-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+#orientation-lock {
+  display: none;
+}
+
+@media (orientation: landscape) and (max-height: 560px) {
+  body:not(.phase-ending) #orientation-lock {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    display: grid;
+    place-items: center;
+    padding: var(--space-4);
+    color: var(--color-soft-white);
+    background: var(--gradient-chaos);
+    font-family: var(--font-mono);
+    text-align: center;
+  }
+}
+
+@media (min-width: 760px) {
+  #app-wrapper {
+    padding-inline: var(--space-4);
+  }
+
+  .top-bar {
+    right: var(--space-4);
+    left: var(--space-4);
+  }
+}

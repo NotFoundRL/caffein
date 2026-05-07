@@ -1,0 +1,94 @@
+.scanlines::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.08) 2px,
+    rgba(0,0,0,0.08) 4px
+  );
+  animation: scan-move 8s linear infinite;
+}
+
+body.reduced-effects .scanlines::after {
+  display: none;
+}
+
+.glitch-text {
+  position: relative;
+  color: var(--color-caffein-pink);
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: glitch-burst 300ms steps(2, end) infinite;
+  animation-delay: var(--glitch-delay, 0ms);
+}
+
+.glitch-text::before {
+  color: var(--color-electric-mint);
+  transform: translateX(-2px);
+}
+
+.glitch-text::after {
+  color: var(--color-glitch-red);
+  transform: translateX(2px);
+}
+
+.glow {
+  filter: drop-shadow(0 0 24px var(--color-aura-pink));
+}
+
+.glitch-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 75;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,51,102,0.16) 0 2px, transparent 2px 8px),
+    repeating-linear-gradient(0deg, rgba(95,255,212,0.1) 0 1px, transparent 1px 7px);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+}
+
+body.reduced-effects .glitch-overlay {
+  opacity: 0.36;
+}
+
+#white-transition {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-transition);
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#white-transition.fade-in {
+  animation: white-fade-in 400ms var(--ease-ending) forwards;
+}
+
+#white-transition.fade-out {
+  animation: white-fade-out 1200ms var(--ease-ending) forwards;
+}
+
+.blackout {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: var(--space-3);
+  background: #000;
+  color: white;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 8vw, 3.8rem);
+  text-align: center;
+}

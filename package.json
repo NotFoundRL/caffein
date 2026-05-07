@@ -1,0 +1,22 @@
+{
+  "name": "caffein-game",
+  "version": "1.0.0",
+  "description": "CAFFEIN - a ragebait web experience built for Cina.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "set NODE_ENV=development&& node index.js",
+    "check": "node --check index.js"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

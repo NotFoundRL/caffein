@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta id="viewport-meta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#F9F7F7">
+    <title>CAFFEIN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/reset.css?v=__APP_VERSION__">
+    <link rel="stylesheet" href="/styles/variables.css?v=__APP_VERSION__">
+    <link rel="stylesheet" href="/styles/base.css?v=__APP_VERSION__">
+    <link rel="stylesheet" href="/styles/layout.css?v=__APP_VERSION__">
+    <link rel="stylesheet" href="/styles/components.css?v=__APP_VERSION__">
+    <link rel="stylesheet" href="/styles/animations.css?v=__APP_VERSION__">
+    <link rel="stylesheet" href="/styles/effects.css?v=__APP_VERSION__">
+    <link rel="stylesheet" href="/styles/ending.css?v=__APP_VERSION__">
+    <script>
+      window.CAFFEIN_ASSETS = __ASSET_FLAGS__;
+    </script>
+  </head>
+  <body>
+    <div id="orientation-lock" aria-hidden="true">
+      Please rotate your device. (The chaos works better vertically.)
+    </div>
+
+    <div id="white-transition" aria-hidden="true"></div>
+
+    <div id="app-wrapper" class="scanlines">
+      <header class="top-bar">
+        <button id="caia-logo" class="brand-pill" type="button" aria-label="CAIA status">CAIA</button>
+        <div id="phase-label" class="phase-label">BOOT</div>
+      </header>
+
+      <main id="game-stage" class="game-stage" aria-live="polite"></main>
+
+      <aside id="caia-panel" class="caia-panel" aria-live="polite">
+        <span class="caia-kicker">CAIA</span>
+        <p id="caia-text">Initializing Caffein Assistance Intelligence Agency...</p>
+      </aside>
+
+      <div id="journey-progress" class="journey-progress" hidden>
+        <span>Journey to Completion: 74%</span>
+        <div class="journey-track"><span></span></div>
+      </div>
+    </div>
+
+    <section id="ending-scene" aria-live="polite" aria-hidden="true">
+      <div class="ending-orb" aria-hidden="true"></div>
+      <div id="ending-pfp-slot" class="ending-pfp-slot">
+        <img id="ending-pfp" src="__PFP_SRC__" alt="Cina" loading="lazy">
+        <div id="ending-initials" class="ending-initials" aria-hidden="true">CI</div>
+      </div>
+      <p class="ending-line ending-line-one">Hey, Caffein.</p>
+      <h1 class="ending-main">You give so much energy...</h1>
+      <p class="ending-line ending-line-last">Thank you for existing.</p>
+      <p id="ending-fallback-note" class="ending-fallback-note" hidden>The music was supposed to play here. Very emotional. Trust me.</p>
+      <div id="silence-visualizer" class="silence-visualizer" hidden aria-hidden="true"></div>
+    </section>
+
+    <div id="popup-root" class="popup-root" aria-live="assertive"></div>
+
+    <div id="lag-overlay" class="lag-overlay" hidden>
+      <div class="lag-card">
+        <p>Processing... please wait</p>
+        <div class="lag-track"><span id="lag-bar"></span></div>
+        <span id="lag-percent">0%</span>
+      </div>
+    </div>
+
+    <template id="confetti-template">
+      <span class="confetti-bit"></span>
+    </template>
+
+    <script type="module" src="/scripts/main.js?v=__APP_VERSION__"></script>
+  </body>
+</html>

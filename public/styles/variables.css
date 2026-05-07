@@ -1,0 +1,64 @@
+:root {
+  --color-soft-white: #F9F7F7;
+  --color-deep-ink: #1A1A2E;
+  --color-caffein-pink: #FF6B9D;
+  --color-blush: #FFB3CC;
+  --color-magenta-edge: #D63384;
+  --color-cool-lavender: #C8B6E2;
+  --color-electric-mint: #5FFFD4;
+  --color-neon-peach: #FF9A76;
+  --color-glitch-red: #FF3366;
+  --color-void: #0D0D14;
+  --color-ghost-white: #FFFFFF;
+  --color-ink-fog: rgba(13,13,20,0.72);
+  --color-aura-pink: rgba(255,107,157,0.35);
+  --color-aura-mint: rgba(95,255,212,0.2);
+  --color-dawn-cream: #FFF5EE;
+  --color-rose-dust: #F4A7B9;
+  --color-warm-charcoal: #3D2B2B;
+
+  --gradient-chaos: linear-gradient(135deg, #1A1A2E 0%, #0D0D14 60%, #2D0030 100%);
+  --gradient-pink-burst: linear-gradient(90deg, #FF6B9D, #D63384);
+  --gradient-ending: linear-gradient(180deg, #FFF5EE 0%, #FFE4EE 100%);
+  --gradient-glow-card: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,107,157,0.05));
+
+  --font-display: "Clash Display", "DM Sans", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-display: clamp(2.5rem, 8vw, 4.5rem);
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-round: 999px;
+
+  --ease-snap: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-chaos: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  --ease-ending: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --shadow-card: 0 24px 80px rgba(13,13,20,0.16);
+  --shadow-pink: 0 0 40px rgba(255,107,157,0.28);
+
+  --z-progress: 70;
+  --z-popups: 90;
+  --z-lag: 100;
+  --z-transition: 120;
+  --z-ending: 80;
+}
